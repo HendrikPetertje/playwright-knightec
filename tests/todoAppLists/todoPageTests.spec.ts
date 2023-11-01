@@ -43,6 +43,8 @@ test.describe('Todo list page', () => {
     await whenIVisitTheTodoPage(page);
 
     test.step('It should match the design that we set in the team', async () => {
+      // You should run your test suite in docker, especially when making screenshots.
+      // check out how here: https://playwright.dev/docs/test-snapshots
       expect(await page.screenshot()).toMatchSnapshot();
     });
   })
